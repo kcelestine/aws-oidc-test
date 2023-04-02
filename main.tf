@@ -3,7 +3,7 @@ terraform {
     organization = "_cloudcte"
 
     workspaces {
-      name = "workspace-k"
+      name = "api-workspace"
     }
   }
 }

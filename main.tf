@@ -10,7 +10,7 @@ terraform {
     organization = "_cloudcte"
 
     workspaces {
-      name = "aws-terraform-github-actions"
+      name = "aws-oidc-test"
     }
   }
 }

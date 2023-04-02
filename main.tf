@@ -3,7 +3,7 @@ terraform {
     organization = "_cloudcte"
 
     workspaces {
-      name = "aws-oidc-test"
+      name = "workspace-k"
     }
   }
 }

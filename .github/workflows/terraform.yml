@@ -7,6 +7,10 @@ on:
       - 'main'
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  contents: read
+
 defaults:
   run:
     shell: bash
@@ -24,6 +28,13 @@ jobs:
     
     - uses: actions/checkout@v2
       name: 'Checkout repository'
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: arn:aws:iam::198516399747:role/gh-actions-role
+        role-session-name: rolesessionKhadijah
+        aws-region: us-east-1
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform

@@ -33,6 +33,6 @@ variable "TFC_AWS_RUN_ROLE_ARN" {
 }
 
 variable "TFC_AWS_PROVIDER_AUTH" {
-  type        = boolean
+  default     = true
   description = "TFC_AWS_PROVIDER_AUTH"
 }

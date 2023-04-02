@@ -1,13 +1,18 @@
 terraform {
   cloud {
     organization = "_cloudcte"
-
     workspaces {
       name = "aws-oidc-test"
     }
   }
+  
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "3.74"
+    }
+  }
 }
-
 
 provider "aws" {
   region = "us-east-1"
